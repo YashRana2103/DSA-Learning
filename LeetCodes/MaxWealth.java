@@ -1,3 +1,5 @@
+package LeetCodes;
+
 public class MaxWealth {
 //    https://leetcode.com/problems/richest-customer-wealth/description/
     public static void main(String[] args) {

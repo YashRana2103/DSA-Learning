@@ -1,3 +1,4 @@
+package BinarySearch;
 public class BinarySearch_Ceiling_Characters {
     public static void main(String[] args) {
         char[] arr = { 'e', 'f', 'j', 'm', 'r', 'u', 'w', 'y' };
