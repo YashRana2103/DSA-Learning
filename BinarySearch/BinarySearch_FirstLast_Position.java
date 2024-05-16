@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class BinarySearch_FirstLast_Position {
     public static void main(String[] args) {
-        int[] arr = { 2, 4, 4, 4, 4, 4, 6, 9, 9, 9, 9, 9 };
+        int[] arr = { 2, 2, 4, 4, 4, 4, 6, 9, 9, 9, 9, 9 };
 
-        int target = 9;
+        int target = 2;
         System.out.println(Arrays.toString(firstLastPosition(arr, target)));
     }
 
