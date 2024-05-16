@@ -3,6 +3,8 @@ package BinarySearch;
 import java.util.Arrays;
 
 public class BinarySearch_FirstLast_Position {
+    // https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+
     public static void main(String[] args) {
         int[] arr = { 2, 2, 4, 4, 4, 4, 6, 9, 9, 9, 9, 9 };
 
