@@ -11,9 +11,10 @@ public class BinarySearch_RotatedArraySearch {
         // int[] rotatedArr = {12, 14, 16, 18, 20, 2, 4, 6, 8, 10};
         // int[] rotatedArr = {7, 8, 9, 10, 1, 2, 3, 4, 5, 6};
         // int[] rotatedArr = {23, 24, 25, 26, 27, 28, 29, 20, 21, 22};
-         int[] rotatedArr = {31, 32, 33, 34, 35, 36, 69, 22, 23, 24, 25, 26, 27, 28, 29, 30};
+//        int[] rotatedArr = {31, 32, 33, 34, 35, 36, 69, 22, 23, 24, 25, 26, 27, 28, 29, 30};
+        int[] rotatedArr = {3,5,1};
 
-        int target = 26;
+        int target = 3;
         System.out.println(search(rotatedArr, target));
     }
 
@@ -55,7 +56,7 @@ public class BinarySearch_RotatedArraySearch {
             return pivot;
         }
 
-        if(target > arr[0]){
+        if(target >= arr[0]){
             return binarySearch(arr, target, 0, pivot-1);
         } else {
             return binarySearch(arr, target, pivot+1, arr.length-1);
