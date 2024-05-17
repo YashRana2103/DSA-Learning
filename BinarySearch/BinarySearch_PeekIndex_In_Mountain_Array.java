@@ -1,5 +1,9 @@
 package BinarySearch;
 
+//https://leetcode.com/problems/peak-index-in-a-mountain-array/
+//https://leetcode.com/problems/find-peak-element/
+
+
 public class BinarySearch_PeekIndex_In_Mountain_Array {
     public static void main(String[] args) {
 
