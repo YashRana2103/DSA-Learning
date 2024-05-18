@@ -2,19 +2,20 @@ package BinarySearch;
 
 public class BinarySearch_RotatedArray_RotationCount {
     public static void main(String[] args) {
-        // int[] rotatedArr = {3, 3, 4, 5, 5, 6, 1, 1, 2, 2};
-        // int[] rotatedArr = {8, 9, 9, 10, 1, 1, 2, 3, 4, 4, 5, 6, 7, 7};
-        // int[] rotatedArr = {15, 15, 16, 17, 17, 18, 19, 19, 20, 11, 11, 12, 13, 13, 14, 14};
-        // int[] rotatedArr = {25, 25, 30, 30, 35, 40, 5, 5, 10, 15, 20, 20};
-        // int[] rotatedArr = {50, 50, 55, 60, 1, 1, 5, 10, 20, 25, 30, 30, 40, 45, 45};
-        // int[] rotatedArr = {100, 110, 120, 130, 130, 140, 150, 60, 60, 70, 80, 90, 90};
-        // int[] rotatedArr = {12, 12, 14, 16, 18, 20, 2, 2, 4, 6, 8, 8, 10, 10};
-        // int[] rotatedArr = {7, 8, 9, 9, 10, 1, 1, 2, 3, 4, 5, 5, 6, 6};
-        // int[] rotatedArr = {23, 23, 24, 25, 26, 27, 28, 29, 20, 20, 21, 22, 22};
-         int[] rotatedArr = {36, 36, 36, 36, 36, 36, 36, 36, 21, 22, 23, 24, 25, 26, 27, 28, 29, 36};
-//        int[] rotatedArr = {1};
+//         int[] arr = {3, 3, 4, 5, 5, 6, 1, 1, 2, 2};
+//         int[] arr = {8, 9, 9, 10, 1, 1, 2, 3, 4, 4, 5, 6, 7, 7};
+//         int[] arr = {15, 15, 16, 17, 17, 18, 19, 19, 20, 11, 11, 12, 13, 13, 14, 14};
+//         int[] arr = {25, 25, 30, 30, 35, 40, 5, 5, 10, 15, 20, 20};
+//         int[] arr = {50, 50, 55, 60, 1, 1, 5, 10, 20, 25, 30, 30, 40, 45, 45};
+//         int[] arr = {100, 110, 120, 130, 130, 140, 150, 60, 60, 70, 80, 90, 90};
+//         int[] arr = {12, 12, 14, 16, 18, 20, 2, 2, 4, 6, 8, 8, 10, 10};
+//         int[] arr = {7, 8, 9, 9, 10, 1, 1, 2, 3, 4, 5, 5, 6, 6};
+//         int[] arr = {23, 23, 24, 25, 26, 27, 28, 29, 20, 20, 21, 22, 22};
+//         int[] arr = {36, 36, 36, 36, 36, 36, 36, 36, 21, 22, 23, 24, 25, 26, 27, 28, 29, 36};
+//         int[] arr = {1, 2, 3, 4, 5, 6};
+         int[] arr = {1};
 
-        System.out.println("Rotation count: "+rotationCount(rotatedArr));
+        System.out.println("Rotation count: "+rotationCount(arr));
     }
 
     private static int findPivotDuplicateValues(int[] arr){
