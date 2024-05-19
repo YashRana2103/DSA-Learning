@@ -2,7 +2,7 @@ package BinarySearch;
 
 import java.util.Arrays;
 
-public class BinarySearch_2DArray {
+public class BinarySearch_2DArray_SortedRowCol {
     public static void main(String[] args) {
         int[][] arr = {
                 {5, 10, 15, 20},
