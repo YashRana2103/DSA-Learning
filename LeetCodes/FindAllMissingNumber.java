@@ -9,8 +9,6 @@ import java.util.List;
 public class FindAllMissingNumber {
     public static void main(String[] args) {
         int[] arr = {4,3,2,7,8,2,3,1};
-//    int[] arr = {1, 5, 3, 4, 2, 7, 6, 0, 9, 8};
-//        int[] arr = {1, 0, 2, 4};
 
         System.out.println(cyclicSortFindAllMissingNumber(arr));
 //        System.out.println(Arrays.toString(arr));
