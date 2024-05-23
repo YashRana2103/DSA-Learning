@@ -2,7 +2,7 @@ package LeetCodes;
 
 // https://leetcode.com/problems/defanging-an-ip-address/
 
-public class Defanging_IP_Address {
+public class String_Defanging_IP_Address {
     public static void main(String[] args) {
         String address = "1.1.1.1";
         System.out.println(defangIPaddr(address));

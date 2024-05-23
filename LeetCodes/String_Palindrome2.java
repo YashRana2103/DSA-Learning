@@ -2,7 +2,7 @@ package LeetCodes;
 
 // https://leetcode.com/problems/valid-palindrome-ii/
 
-public class StringPalindrome2 {
+public class String_Palindrome2 {
     public static void main(String[] args) {
         String str = "deeee";
         System.out.println(validPalindrome(str));

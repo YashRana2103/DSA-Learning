@@ -2,7 +2,7 @@ package LeetCodes;
 
 // https://leetcode.com/problems/valid-palindrome/
 
-public class StringPalindrome {
+public class String_Palindrome {
     public static void main(String[] args) {
         String str = "ya: s, h say";
         System.out.println(isPalindrome(str));
