@@ -19,14 +19,14 @@ public class Hashing_Strings {
     }
 
     private static int checkNumbers(int[] hashArr, char ch) {
-        return hashArr[ch - 'a'];
+        return hashArr[ch];
     }
 
     private static int[] createHashArray(String str) {
-        int[] hashArr = new int[26];
+        int[] hashArr = new int[256];
 
         for (int i = 0; i < str.length(); i++) {
-            hashArr[str.charAt(i) - (int) 'a']++;
+            hashArr[str.charAt(i)]++;
         }
         return hashArr;
     }
