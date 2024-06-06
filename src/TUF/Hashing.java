@@ -1,6 +1,7 @@
 package TUF;
 
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Hashing {
@@ -38,11 +39,8 @@ public class Hashing {
     }
 
     private static int[] createHashArray(int[] arr, int sizeOfArray) {
-        int[] hashArr = new int[sizeOfArray*2];
 
-        for (int i = 0; i < hashArr.length; i++) {
-            hashArr[i] = 0;
-        }
+        int[] hashArr = new int[(Arrays.stream(arr).max().getAsInt())+1];
 
         for (int i = 0; i < sizeOfArray; i++) {
             hashArr[arr[i]]++;
