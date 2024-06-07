@@ -1,6 +1,4 @@
-package Recursion;
-
-import java.util.Arrays;
+package TUF;
 
 public class Practice {
     public static void main(String[] args) {
