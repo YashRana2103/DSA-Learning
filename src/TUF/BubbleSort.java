@@ -12,11 +12,15 @@ public class BubbleSort {
     private static int[] bubbleSort(int[] arr) {
         int n = arr.length;
         for (int i = n-1; i >= 1 ; i--) {
+            boolean isSwapped = false;
             for (int j = 0; j <= i - 1; j++) {
                 if(arr[j] > arr[j+1]) {
                     swap(arr, j, j+1);
+                    isSwapped = true;
                 }
             }
+            if(!isSwapped) return arr;
+//            System.out.println("executed");
         }
         return arr;
     }
