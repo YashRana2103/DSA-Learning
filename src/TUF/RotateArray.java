@@ -7,7 +7,7 @@ public class RotateArray {
         int[] arr = {1, 2, 3, 4, 5};
 
 //        System.out.println(Arrays.toString(rotateLeft(arr)));
-        System.out.println(Arrays.toString(rotateLeftNtimes(arr, 3)));
+        System.out.println(Arrays.toString(rotateLeftNtimes(arr, 5)));
     }
 
     private static int[] rotateLeft(int[] arr) {
@@ -22,6 +22,12 @@ public class RotateArray {
     }
 
     private static int[] rotateLeftNtimes(int[] arr, int n) {
+        n = n % arr.length;
+
+        if(n == arr.length) {
+            return arr;
+        }
+
         for (int i = 0; i < n; i++) {
             int temp = arr[0];
 
