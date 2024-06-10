@@ -8,7 +8,9 @@ public class FindNumberAppearsOne {
     }
     
     private static int numberAppearsOne(int[] arr, int n) {
-        int[] hashArr = new int[n+1];
+        int sizeOfHashArr = (arr[n - 1]) + 1;
+
+        int[] hashArr = new int[sizeOfHashArr];
 
         for (int i = 0; i < n; i++) {
             hashArr[arr[i]]++;
