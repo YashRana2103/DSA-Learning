@@ -10,6 +10,11 @@ public class FindNumberAppearsOne {
     }
     
     private static int numberAppearsOne(int[] arr, int n) {
+//        return betterSol(arr, n);
+        return optimalSol(arr, n);
+    }
+
+    private static int betterSol(int[] arr, int n) {
         int max = arr[0];
         for (int i = 1; i < n; i++) {
             max = max(arr[i], max);
@@ -28,7 +33,15 @@ public class FindNumberAppearsOne {
                 return i;
             }
         }
-        
+
         return -1;
+    }
+
+    private static int optimalSol(int[] arr, int n) {
+        int xor = 0;
+        for (int i = 0; i < n; i++) {
+            xor ^= arr[i];
+        }
+        return xor;
     }
 }
