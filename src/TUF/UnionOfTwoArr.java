@@ -4,26 +4,46 @@ import java.util.ArrayList;
 
 public class UnionOfTwoArr {
     public static void main(String[] args) {
-        int[] arr1 = {1,1,2,3,4};
-        int[] arr2 = {2,3,4,4,5};
+        int[] arr1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 12, 13, 13, 14};
+        int[] arr2 = {1, 1, 1, 1, 1, 1, 1, 1, 1};
 
         System.out.println(unionArr(arr1, arr2));
     }
 
     private static ArrayList<Integer> unionArr(int[] arr1, int[] arr2) {
+        int n1 = arr1.length;
+        int n2 = arr2.length;
+        int i = 0;
         int j = 0;
-        int n = arr1.length;
         ArrayList<Integer> unionArray = new ArrayList<>();
-        if(arr1.length > arr2.length) n = arr2.length;
-        for (int i = 0; i < n - 1; i++) {
-            if(arr1[i] != arr2[i]) {
-                unionArray.add(j, arr1[i]);
+        while(i < n1 && j < n2) {
+            if(arr1[i] <= arr2[j]) {
+                if (unionArray.size() == 0 || (unionArray.get(unionArray.size() - 1)) != arr1[i]) {
+                    unionArray.add(arr1[i]);
+                }
+                i++;
+            } else {
+                if (unionArray.size() == 0 || (unionArray.get(unionArray.size() - 1)) != arr2[j]) {
+                    unionArray.add(arr2[j]);
+                }
                 j++;
-                unionArray.add(j, arr2[i]);
             }
-            unionArray.add(j, arr1[i]);
-
         }
+
+        while(j < n2) {
+            if (unionArray.size() == 0 || (unionArray.get(unionArray.size() - 1)) != arr2[j]) {
+                unionArray.add(arr2[j]);
+            }
+            j++;
+        }
+
+        while(i < n1) {
+            if (unionArray.size() == 0 || (unionArray.get(unionArray.size() - 1)) != arr1[i]) {
+                unionArray.add(arr1[i]);
+            }
+            i++;
+        }
+
         return unionArray;
     }
 }
