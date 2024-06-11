@@ -20,6 +20,10 @@ public class MaxSubarrSum {
             if(sum < 0) sum = 0;
         }
 
+        if(max<0) {
+            return 0;
+        }
+
         return max;
     }
 }
