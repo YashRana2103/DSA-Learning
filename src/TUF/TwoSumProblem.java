@@ -4,12 +4,14 @@ import java.util.Arrays;
 
 public class TwoSumProblem {
     public static void main(String[] args) {
-        int[] arr = {2, 6, 5, 8, 11};
+        int[] arr = {6, 4};
+        int target = 10;
 
-        System.out.println(Arrays.toString(check2Sum(arr, arr.length, 14)));
+        System.out.println(Arrays.toString(check2Sum_Index(arr, arr.length, target)));
+        System.out.println(check2Sum_Bool(arr, arr.length, target));
     }
 
-    private static int[] check2Sum(int[] arr, int n, int target) {
+    private static int[] check2Sum_Index(int[] arr, int n, int target) {
         int[] hashArray = new int[target+1];
         int[] ans = new int[2];
         Arrays.fill(hashArray, -1);
@@ -27,5 +29,24 @@ public class TwoSumProblem {
         }
 
         return ans;
+    }
+
+    private static boolean check2Sum_Bool(int[] arr, int n, int target) {
+        int[] hashArray = new int[target+1];
+        int[] ans = new int[2];
+        Arrays.fill(hashArray, -1);
+        Arrays.fill(ans, -1);
+
+        for (int i = 0; i < n; i++) {
+            hashArray[arr[i]] = i;
+        }
+
+        for (int i = 0; i < n; i++) {
+            if(hashArray[target - arr[i]] != -1) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
