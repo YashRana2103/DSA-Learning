@@ -20,11 +20,9 @@ public class TwoSumProblem {
         }
 
         for (int i = 0; i < n; i++) {
-            int secVal = target - arr[i];
-
-            if(hashArray[secVal] != -1) {
+            if(hashArray[target - arr[i]] != -1) {
                 ans[0] = i;
-                ans[1] = hashArray[secVal];
+                ans[1] = hashArray[target - arr[i]];
             }
         }
 
