@@ -14,14 +14,14 @@ public class Sort0s1s2s {
         int mid = 0;
         int high = n - 1;
 
-        while(mid < high) {
+        while(mid <= high) {
             if(arr[mid] == 0) {
                 swap(arr, mid, low);
                 mid++;
                 low++;
-            } else if(arr[mid] == 1){
+            } else if(arr[mid] == 1) {
                 mid++;
-            } else {
+            } else if(arr[mid] == 2) {
                 swap(arr, mid, high);
                 high--;
             }
