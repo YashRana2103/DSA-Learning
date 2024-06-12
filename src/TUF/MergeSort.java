@@ -10,7 +10,7 @@ public class MergeSort {
         System.out.println(Arrays.toString(mergeSort(arr, 0, arr.length - 1)));
     }
 
-    private static int[] mergeSort(int[] arr, int low, int high) {
+    public static int[] mergeSort(int[] arr, int low, int high) {
         if(low >= high){
             return arr;
         }
@@ -22,7 +22,7 @@ public class MergeSort {
         return merge(arr, low, mid, high);
     }
 
-    private static int[] merge(int[] arr, int low, int mid, int high) {
+    public static int[] merge(int[] arr, int low, int mid, int high) {
         ArrayList<Integer> temp = new ArrayList<>();
 
         int leftArr = low;
