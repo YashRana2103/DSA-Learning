@@ -3,19 +3,29 @@ package TUF;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import static java.lang.Math.min;
+
 public class RearrangeArrayBySign {
     public static void main(String[] args) {
-        int[] arr = {-1, 2, 3, -4, -6, 4, -8, 8, 9, -3};
+        int[] arr1 = {-1, 2, 3, -4, -6, 4, -8, 8, 9, -3};
+        int[] arr2 = {-1, 2, -4, 3, 4, 9, 10};
 
-        System.out.println(Arrays.toString(variety1(arr, arr.length)));
+//        System.out.println(Arrays.toString(variety1(arr, arr.length)));
+        System.out.println(Arrays.toString(variety2(arr2, arr2.length)));
     }
 
     private static int[] variety1(int[] arr, int n) {
-//        return rearrangeArray_BruteForce(arr, n);
-        return rearrangeArray_Optimal(arr, n);
+//        return v1_RearrangeArray_BruteForce(arr, n);
+        return v1_RearrangeArray_Optimal(arr, n);
     }
 
-    private static int[] rearrangeArray_BruteForce(int[] arr, int n) {
+    private static int[] variety2(int[] arr, int n) {
+        return v2_RearrangeArray_BruteForce(arr, n);
+//        return v2_RearrangeArray_Optimal(arr, n);
+    }
+
+
+    private static int[] v1_RearrangeArray_BruteForce(int[] arr, int n) {
         ArrayList<Integer> positive = new ArrayList<>();
         ArrayList<Integer> negative = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -29,7 +39,7 @@ public class RearrangeArrayBySign {
         return arr;
     }
 
-    private static int[] rearrangeArray_Optimal(int[] arr, int n) {
+    private static int[] v1_RearrangeArray_Optimal(int[] arr, int n) {
         int[] ans = new int[n];
         int pos = 0;
         int neg = 1;
@@ -45,4 +55,30 @@ public class RearrangeArrayBySign {
         }
         return ans;
     }
+
+    private static int[] v2_RearrangeArray_BruteForce(int[] arr, int n) {
+        ArrayList<Integer> positive = new ArrayList<>();
+        ArrayList<Integer> negative = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            if(arr[i] > 0) positive.add(arr[i]);
+            if(arr[i] < 0) negative.add(arr[i]);
+        }
+
+        int minSize = min(positive.size(), negative.size());
+        for (int i = 0; i < minSize; i++) {
+            arr[2 * i] = positive.get(i);
+            arr[(2 * i) + 1] = negative.get(i);
+        }
+
+        int index = minSize * 2;
+        for (int i = minSize; i < positive.size(); i++) {
+            arr[index] = positive.get(i);
+            index++;    
+        }
+        return arr;
+    }
+
+//    private static int[] v2_RearrangeArray_Optimal(int[] arr, int n) {
+//        return;
+//    }
 }
