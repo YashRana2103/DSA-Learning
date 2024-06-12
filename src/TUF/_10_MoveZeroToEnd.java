@@ -1,10 +1,8 @@
 package TUF;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-public class MoveZeroToEnd {
+public class _10_MoveZeroToEnd {
     public static void main(String[] args) {
         int[] arr = {1,2,0,4, 0, 0, 10, 1, 0, 1};
 

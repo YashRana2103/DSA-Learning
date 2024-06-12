@@ -1,6 +1,6 @@
 package TUF;
 
-public class Fibo {
+public class _2_Fibo {
     public static void main(String[] args) {
         for (int i = 1; i <= 10; i++) {
             System.out.print(fibo(i)+" ");

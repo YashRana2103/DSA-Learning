@@ -2,7 +2,7 @@ package TUF;
 
 import java.util.Arrays;
 
-public class TwoSumProblem {
+public class _16_TwoSumProblem {
     public static void main(String[] args) {
         int[] arr = {6, 4};
         int target = 10;

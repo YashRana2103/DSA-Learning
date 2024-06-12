@@ -2,7 +2,7 @@ package TUF;
 
 import java.util.Arrays;
 
-public class InsertionSort {
+public class _6_InsertionSort {
     public static void main(String[] args) {
         int[] arr = {32, 35, 1 , 75, 8, 90, 12, 34, 69};
 

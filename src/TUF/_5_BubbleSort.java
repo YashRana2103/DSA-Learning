@@ -2,7 +2,7 @@ package TUF;
 
 import java.util.Arrays;
 
-public class BubbleSort {
+public class _5_BubbleSort {
     public static void main(String[] args) {
         int[] arr = {32, 35, 1 , 75, 8, 90, 12, 34, 69};
 

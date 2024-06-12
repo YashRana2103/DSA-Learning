@@ -1,10 +1,9 @@
 package TUF;
 
-import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Hashing {
+public class _3_Hashing {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         System.out.print("Enter size of the array: ");

@@ -3,7 +3,7 @@ package TUF;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MergeSort {
+public class _7_MergeSort {
     public static void main(String[] args) {
         int[] arr = {32, 54, 12, 45, 12, 65, 321, 5, 2, 23, 1};
 

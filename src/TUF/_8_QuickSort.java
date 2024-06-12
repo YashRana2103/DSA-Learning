@@ -2,7 +2,7 @@ package TUF;
 
 import java.util.Arrays;
 
-public class QuickSort {
+public class _8_QuickSort {
     public static void main(String[] args) {
         int[] arr = {3, 1, 5, 2, 6, 4};
 

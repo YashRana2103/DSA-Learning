@@ -2,7 +2,7 @@ package TUF;
 
 import java.util.Arrays;
 
-public class SelectionSort {
+public class _4_SelectionSort {
     public static void main(String[] args) {
         int[] arr = {4, 2, 3, 45, 2, 4, 513, 14};
 

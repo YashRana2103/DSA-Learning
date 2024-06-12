@@ -1,6 +1,6 @@
 package TUF;
 
-public class Practice {
+public class _1_Practice {
     public static void main(String[] args) {
         int[] arr = {4, 2, 0, 9, 7, 5};
         String str = "Yahhay";

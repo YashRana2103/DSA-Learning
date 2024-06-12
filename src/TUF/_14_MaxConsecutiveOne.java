@@ -2,7 +2,7 @@ package TUF;
 
 import static java.lang.Math.max;
 
-public class MaxConsecutiveOne {
+public class _14_MaxConsecutiveOne {
     public static void main(String[] args) {
         int[] arr = {1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1};
 

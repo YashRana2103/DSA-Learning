@@ -2,7 +2,7 @@ package TUF;
 
 import static java.lang.Math.max;
 
-public class FindNumberAppearsOne {
+public class _15_FindNumberAppearsOne {
     public static void main(String[] args) {
         int[] arr = {1, 1, 2, 3, 3, 4, 4};
 

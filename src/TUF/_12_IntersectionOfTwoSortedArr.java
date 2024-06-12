@@ -2,7 +2,7 @@ package TUF;
 
 import java.util.ArrayList;
 
-public class IntersectionOfTwoSortedArr {
+public class _12_IntersectionOfTwoSortedArr {
     public static void main(String[] args) {
         int[] arr1 = {1, 2, 1, 3, 5, 12, 13, 13, 14};
         int[] arr2 = {1, 1, 2, 3, 4, 5};

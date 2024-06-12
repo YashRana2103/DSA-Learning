@@ -1,6 +1,6 @@
 package TUF;
 
-public class MissingNumber {
+public class _13_MissingNumber {
     public static void main(String[] args) {
         int[] arr = {2, 3, 4, 5, 6};
 

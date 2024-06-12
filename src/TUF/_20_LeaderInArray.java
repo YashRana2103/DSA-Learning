@@ -1,9 +1,8 @@
 package TUF;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class LeaderInArray {
+public class _20_LeaderInArray {
     public static void main(String[] args) {
         int[] arr = {10, 22, 12, 3, 0, 6};
 

@@ -2,7 +2,7 @@ package TUF;
 
 import static java.lang.Math.max;
 
-public class MaxSubarrSum {
+public class _18_MaxSubArraySum {
     public static void main(String[] args) {
         int[] arr = {-1, -2, 1, 3, -2, 4, -5, 6};
 

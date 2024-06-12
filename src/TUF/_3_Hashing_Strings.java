@@ -2,7 +2,7 @@ package TUF;
 
 import java.util.Scanner;
 
-public class Hashing_Strings {
+public class _3_Hashing_Strings {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
 

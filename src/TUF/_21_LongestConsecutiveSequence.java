@@ -1,12 +1,8 @@
 package TUF;
 
-import java.util.ArrayList;
-
-import static TUF.MergeSort.*;
-
 import static java.lang.Math.max;
 
-public class LongestConsecutiveSequence {
+public class _21_LongestConsecutiveSequence {
     public static void main(String[] args) {
         int[] arr = {100, 102, 100, 5, 101, 101, 4, 3, 2, 3, 2, 1, 1, 1, 2};
 
@@ -34,7 +30,7 @@ public class LongestConsecutiveSequence {
     }
 
     private static int Better(int[] arr, int n) {
-        MergeSort.mergeSort(arr, 0, n - 1);
+        _7_MergeSort.mergeSort(arr, 0, n - 1);
         int longest = 0;
         int count = 0;
         int lastSmaller = Integer.MIN_VALUE;

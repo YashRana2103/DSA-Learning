@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 import static java.lang.Math.min;
 
-public class RearrangeArrayBySign {
+public class _19_RearrangeArrayBySign {
     public static void main(String[] args) {
         int[] arr1 = {-1, 2, 3, -4, -6, 4, -8, 8, 9, -3};
         int[] arr2 = {-1, 2, -4, 3, 4, 9, 10};
