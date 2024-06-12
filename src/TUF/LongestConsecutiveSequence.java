@@ -51,12 +51,6 @@ public class LongestConsecutiveSequence {
         return longest;
     }
 
-    private static int Optimal(int[] arr, int n) {
-        int longest = 0;
-        return longest;
-    }
-
-
     private static boolean linearSearch(int[] arr, int n, int searchElement) {
         for (int i = 0; i < n; i++) {
             if(arr[i] == searchElement) return true;
