@@ -9,9 +9,10 @@ public class RearrangeArrayBySign {
     public static void main(String[] args) {
         int[] arr1 = {-1, 2, 3, -4, -6, 4, -8, 8, 9, -3};
         int[] arr2 = {-1, 2, -4, 3, 4, 9, 10};
+        int[] arr3 = {-1, 2, -4, 3, -5, -9, -10};
 
 //        System.out.println(Arrays.toString(variety1(arr, arr.length)));
-        System.out.println(Arrays.toString(variety2(arr2, arr2.length)));
+        System.out.println(Arrays.toString(variety2(arr3, arr3.length)));
     }
 
     private static int[] variety1(int[] arr, int n) {
@@ -73,7 +74,7 @@ public class RearrangeArrayBySign {
         int index = minSize * 2;
         for (int i = minSize; i < positive.size(); i++) {
             arr[index] = positive.get(i);
-            index++;    
+            index++;
         }
         return arr;
     }
