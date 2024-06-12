@@ -22,7 +22,6 @@ public class RearrangeArrayBySign {
 
     private static int[] variety2(int[] arr, int n) {
         return v2_RearrangeArray_BruteForce(arr, n);
-//        return v2_RearrangeArray_Optimal(arr, n);
     }
 
 
@@ -78,8 +77,4 @@ public class RearrangeArrayBySign {
         }
         return arr;
     }
-
-//    private static int[] v2_RearrangeArray_Optimal(int[] arr, int n) {
-//        return;
-//    }
 }
