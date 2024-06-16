@@ -12,8 +12,11 @@ public class _2_selectionSort {
     }
 
     public static int[] sort(int[] arr, int n) {
+        // this loop will run from startOfArray to endOfArray - 1 bcuz, if except last element all the other elements are sorted and smaller than that last element and its means the last element is greatest and array is sorted
         for (int i = 0; i < n - 1; i++) {
             int min = i;
+
+            // this loop is to find min element from i to endOfTheArray
             for (int j = i; j < n; j++) {
                 if(arr[min] > arr[j]) min = j;
             }
