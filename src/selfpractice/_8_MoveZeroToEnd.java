@@ -10,8 +10,8 @@ public class _8_MoveZeroToEnd {
     }
 
     public static int[] moveZeroToEnd(int[] arr, int n) {
-        return bruteForce(arr, n);
-//        return optimal(arr, n);
+//        return bruteForce(arr, n);
+        return optimal(arr, n);
     }
 
     public static int[] bruteForce(int[] arr, int n) {
@@ -28,6 +28,18 @@ public class _8_MoveZeroToEnd {
     }
 
     public static int[] optimal(int[] arr, int n) {
+        int j = 0;
+        for (int i = 0; i < n && j < n; i++) {
+            while(arr[j] != 0) j++;
+            while(arr[i] == 0) i++;
+            if(i > j) swap(arr, i, j);
+        }
         return arr;
+    }
+
+    static void swap(int[] arr, int index1, int index2) {
+        int temp = arr[index1];
+        arr[index1] = arr[index2];
+        arr[index2] = temp;
     }
 }
