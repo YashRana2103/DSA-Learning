@@ -1,4 +1,4 @@
-package TUF;
+package tuf;
 
 import static java.lang.Math.max;
 

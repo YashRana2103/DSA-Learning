@@ -1,4 +1,4 @@
-package TUF;
+package tuf;
 
 public class _2_Fibo {
     public static void main(String[] args) {

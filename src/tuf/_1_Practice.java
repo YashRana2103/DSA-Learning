@@ -1,4 +1,4 @@
-package TUF;
+package tuf;
 
 public class _1_Practice {
     public static void main(String[] args) {

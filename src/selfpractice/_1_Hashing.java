@@ -1,4 +1,4 @@
-package SelfPractice;
+package selfpractice;
 
 // wap to check how many a number appears in array
 

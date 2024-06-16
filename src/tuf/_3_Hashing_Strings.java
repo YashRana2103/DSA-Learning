@@ -1,4 +1,4 @@
-package TUF;
+package tuf;
 
 import java.util.Scanner;
 

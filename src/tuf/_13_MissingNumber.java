@@ -1,4 +1,4 @@
-package TUF;
+package tuf;
 
 public class _13_MissingNumber {
     public static void main(String[] args) {
