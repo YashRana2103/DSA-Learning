@@ -9,10 +9,21 @@ public class _4_InsertionSort {
         System.out.println(Arrays.toString(sort(arr, arr.length)));
     }
 
+//    public static int[] sort(int[] arr, int n) {
+//        for (int i = 1; i < n; i++) {
+//            for (int j = 0; j < i; j++) {
+//                if(arr[j] > arr[i]) swap(arr, j, i);
+//            }
+//        }
+//        return arr;
+//    }
+
     public static int[] sort(int[] arr, int n) {
         for (int i = 1; i < n; i++) {
-            for (int j = 0; j < i; j++) {
-                if(arr[j] > arr[i]) swap(arr, j, i);
+            int j = i;
+            while(j > 0) {
+                if(arr[j - 1] > arr[j]) swap(arr, j-1, j);
+                j--;
             }
         }
         return arr;
