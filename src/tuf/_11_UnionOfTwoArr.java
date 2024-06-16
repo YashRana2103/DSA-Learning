@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class _11_UnionOfTwoArr {
     public static void main(String[] args) {
         int[] arr1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 12, 13, 13, 14};
-        int[] arr2 = {1, 1, 1, 1, 1, 1, 1, 1, 1};
+        int[] arr2 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 19};
 
         System.out.println(unionArr(arr1, arr2));
     }
