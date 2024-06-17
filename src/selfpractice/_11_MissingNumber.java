@@ -7,8 +7,8 @@ public class _11_MissingNumber {
         System.out.println(findMissingNumber(arr, arr.length, 6));
     }
     public static int findMissingNumber(int[] arr, int n, int N) {
-        return better(arr, n, N);
-//        return optimal(arr, n, N);
+//        return better(arr, n, N);
+        return optimal(arr, n, N);
     }
     public static int better(int[] arr, int n, int N) {
         int[] hashArray = new int[N + 1];
@@ -17,6 +17,9 @@ public class _11_MissingNumber {
         return -1;
     }
     public static int optimal(int[] arr, int n, int N) {
-        
+        int calculatedSum = 0;
+        for (int i = 0; i < n; i++) calculatedSum += arr[i];
+        int actualSum = (N * (N + 1)) / 2;
+        return actualSum - calculatedSum;
     }
 }
