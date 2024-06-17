@@ -8,10 +8,10 @@ public class _13_NumberAppearsOne {
         System.out.println(numberAppearsOne(arr, arr.length));
     }
     public static int numberAppearsOne(int[] arr, int n) {
-        return better(arr, n);
-//        return optimal(arr, n);
+//        return better(arr, n);
+        return optimal(arr, n);
     }
-    static int better(int[] arr, int n) {
+    public static int better(int[] arr, int n) {
         int max = arr[0];
         for (int i = 0; i < n; i++) {
             max = max(max, arr[i]);
@@ -22,5 +22,10 @@ public class _13_NumberAppearsOne {
             if(hashArr[i] == 1)
                 return i;
         return -1;
+    }
+    public static int optimal(int[] arr, int n) {
+        int XOR = 0;
+        for (int i = 0; i < n; i++) XOR ^= arr[i];
+        return XOR;
     }
 }
