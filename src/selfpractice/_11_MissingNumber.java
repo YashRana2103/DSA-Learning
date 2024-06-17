@@ -16,4 +16,7 @@ public class _11_MissingNumber {
         for (int i = 1; i < N + 1; i++) if(hashArray[i] == 0) return i;
         return -1;
     }
+    public static int optimal(int[] arr, int n, int N) {
+        
+    }
 }
