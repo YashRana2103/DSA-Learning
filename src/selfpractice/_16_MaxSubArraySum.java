@@ -19,29 +19,4 @@ public class _16_MaxSubArraySum {
         if(max < 0) return 0;
         return max;
     }
-
-    public static void kadaneAlgo_printSubArr(int[] arr, int n) {
-        // not working
-        int sum = 0;
-        int max = arr[0];
-        int start = 0;
-        int ansStart = -1;
-        int ansEnd = -1;
-
-        for(int i = 0; i < n; i++) {
-            if(sum == 0) start = i;
-            sum += arr[i];
-            if(sum > max) {
-                max = sum;
-                ansStart = start;
-                ansEnd = i;
-            }
-
-            if(sum < 0) sum = 0;
-        }
-
-        for (int i = ansStart; i <= ansEnd; i++) {
-            System.out.print(arr[i]+" ");
-        }
-    }
 }
