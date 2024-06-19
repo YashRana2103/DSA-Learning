@@ -11,8 +11,8 @@ public class _19_RearrangeArrayBySign {
         int[] arr2 = {-1, 2, -4, 3, 4, 9, 10};
         int[] arr3 = {-1, 2, -4, 3, -5, -9, -10};
 
-//        System.out.println(Arrays.toString(variety1(arr, arr.length)));
-        System.out.println(Arrays.toString(variety2(arr3, arr3.length)));
+        System.out.println(Arrays.toString(variety1(arr1, arr1.length)));
+//        System.out.println(Arrays.toString(variety2(arr3, arr3.length)));
     }
 
     private static int[] variety1(int[] arr, int n) {
