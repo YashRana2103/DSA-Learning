@@ -19,8 +19,8 @@ public class _23_BS_FirstLastOccurance {
         return new int[]{firstOccurance(arr, n, value), lastOccurance(arr, n, value)};
     }
     public static int firstOccurance(int[] arr, int n, int value) {
-        int low = 0, high = n - 1;
         int ans = -1;
+        int low = 0, high = n - 1;
         while(low < high) {
             int mid = low + (high - low) / 2;
             if(arr[mid] >= value) {
@@ -33,8 +33,8 @@ public class _23_BS_FirstLastOccurance {
         return ans;
     }
     public static int lastOccurance(int[] arr, int n, int value) {
-        int low = 0, high = n - 1;
         int ans = -1;
+        int low = 0, high = n - 1;
         while(low < high) {
             int mid = low + (high - low) / 2;
             if(arr[mid] <= value) {
