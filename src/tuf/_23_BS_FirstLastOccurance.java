@@ -12,7 +12,6 @@ public class _23_BS_FirstLastOccurance {
     }
     public static int[] firstLastOccurance_LB_UB(int[] arr, int n, int value) {
         int lb = _22_BS_LowerBound_UpperBound.lowerBound(arr, n, value);
-        int ub = _22_BS_LowerBound_UpperBound.upperBound(arr, n, value);
         if(lb == n || arr[lb] != value) return new int[]{-1, -1};
         return new int[]{lb, upperBound(arr, n, value) - 1};
     }
