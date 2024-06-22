@@ -16,7 +16,9 @@ public class _23_BS_FirstLastOccurance {
         return new int[]{lb, upperBound(arr, n, value) - 1};
     }
     public static int[] firstLastOccurance_BS(int[] arr, int n, int value) {
-        return new int[]{firstOccurance(arr, n, value), lastOccurance(arr, n, value)};
+        int first = firstOccurance(arr, n, value);
+        if(first == -1) return new int[]{-1, -1};
+        return new int[]{first, lastOccurance(arr, n, value)};
     }
     public static int firstOccurance(int[] arr, int n, int value) {
         int ans = -1;
