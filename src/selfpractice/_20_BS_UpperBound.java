@@ -14,9 +14,7 @@ public class _20_BS_UpperBound {
             if(arr[mid] > target) {
                 ans = mid;
                 high = mid - 1;
-            } else {
-                low = mid + 1;
-            }
+            } else low = mid + 1;
         }
         return ans;
     }
