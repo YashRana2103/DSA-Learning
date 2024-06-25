@@ -13,9 +13,7 @@ public class _21_BS_SearchInsertPosition {
             if(arr[mid] >= value) {
                 ans = mid;
                 high = mid - 1;
-            } else {
-                low = mid + 1;
-            }
+            } else low = mid + 1;
         }
         return ans;
     }
