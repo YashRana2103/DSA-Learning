@@ -41,7 +41,7 @@ public class _23_BS_FirstLastOccurance {
         int low = 0, high = n - 1;
         while(low <= high) {
             int mid = low + (high - low) / 2;
-            if(arr[mid] <= value) {
+            if(arr[mid] == value) {
                 ans = mid;
                 low = mid + 1;
             } else if(arr[mid] > value) {
