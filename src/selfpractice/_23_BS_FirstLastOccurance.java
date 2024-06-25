@@ -1,9 +1,9 @@
 package selfpractice;
-import tuf._22_BS_LowerBound_UpperBound;
 
 import java.util.Arrays;
 
-import static tuf._22_BS_LowerBound_UpperBound.*;
+import static selfpractice._19_BS_LowerBound.*;
+import static selfpractice._20_BS_UpperBound.*;
 
 public class _23_BS_FirstLastOccurance {
     public static void main(String[] args) {
@@ -12,9 +12,9 @@ public class _23_BS_FirstLastOccurance {
         System.out.println(Arrays.toString(firstLastOccurance_BS(arr, arr.length, 7)));
     }
     public static int[] firstLastOccurance_LB_UB(int[] arr, int n, int value) {
-        int lb = _22_BS_LowerBound_UpperBound.lowerBound(arr, n, value);
+        int lb = _19_BS_LowerBound.lowerBound(arr, n, value);
         if(lb == n || arr[lb] != value) return new int[]{-1, -1};
-        return new int[] {lb, _22_BS_LowerBound_UpperBound.upperBound(arr, n, value) - 1};
+        return new int[] {lb, _20_BS_UpperBound.upperBound(arr, n, value) - 1};
     }
     public static int[] firstLastOccurance_BS(int[] arr, int n, int value) {
         int firstOcc = firstOccurance(arr, n, value);
