@@ -3,7 +3,7 @@ package selfpractice;
 public class _26_BS_II_SearchRotatedArray {
     public static void main(String[] args) {
         int[] arr = {3, 3, 3, 4, 4, 5, 1, 2, 3, 3, 3};
-        System.out.println(searchRotatedArray(arr, arr.length, 4));
+        System.out.println(searchRotatedArray(arr, arr.length, 2));
     }
     public static boolean searchRotatedArray(int[] arr, int n, int target) {
         int low = 0, high = n - 1;
