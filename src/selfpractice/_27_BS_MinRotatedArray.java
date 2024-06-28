@@ -4,8 +4,9 @@ import static java.lang.Math.min;
 
 public class _27_BS_MinRotatedArray {
     public static void main(String[] args) {
-        int[] arr = {7, 8, 9, 0, 1, 2, 3, 4, 5, 6};
-        System.out.println(minRotatedArray(arr, arr.length));
+        int[] arr1 = {7, 8, 9, 0, 1, 2, 3, 4, 5, 6};
+        int[] arr2 = {9, 10, 11, 12, 13, 14, 15, 16, 17, 1, 2, 3, 4, 5, 6, 7, 8};
+        System.out.println(minRotatedArray(arr2, arr2.length));
     }
     public static int minRotatedArray(int[] arr, int n) {
         int low = 0, high = n - 1;
