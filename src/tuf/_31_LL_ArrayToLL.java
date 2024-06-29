@@ -26,8 +26,14 @@ public class _31_LL_ArrayToLL {
         Node head = new Node(arr[0]);
         Node mover = head;
         for (int i = 1; i < arr.length; i++) {
+
+            // creating new node with value = arrValue and next = null (assuming that this is the last element)
             Node temp = new Node(arr[i]);
+
+            // assign new node's address to current node's next pointer
             mover.next = temp;
+
+            // move mover to newly added node so that we can add more elements afterward
             mover = temp;
         }
         return head;
