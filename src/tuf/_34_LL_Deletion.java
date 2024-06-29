@@ -21,7 +21,8 @@ public class _34_LL_Deletion {
 
 //        head = deleteAtHead(head);
 //        head = deleteAtTail(head);
-        head = deleteAtPosition(head, 8);
+//        head = deleteAtPosition(head, 8);
+        head = deleteElement(head, 5);
         print(head);
         System.out.println();
     }
@@ -80,13 +81,23 @@ public class _34_LL_Deletion {
         return head;
     }
 
-    public static int lengthOfLL(Node head) {
-        Node temp = head;
-        int cnt = 0;
-        while(temp != null) {
-            temp = temp.next;
-            cnt++;
+    public static Node deleteElement(Node head, int element) {
+        if(head == null) return head;
+        if(head.data == element) {
+            Node temp = head;
+            head = head.next;
+            return head;
         }
-        return cnt;
+        Node temp = head;
+        Node prev = null;
+        while(temp != null) {
+            if(temp.data == element) {
+                prev.next = prev.next.next;
+                break;
+            }
+            prev = temp;
+            temp = temp.next;
+        }
+        return head;
     }
 }
