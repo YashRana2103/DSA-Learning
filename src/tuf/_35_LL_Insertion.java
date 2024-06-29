@@ -9,6 +9,10 @@ public class _35_LL_Insertion {
             this.data = data;
             this.next = null;
         }
+        Node(int data, Node next) {
+            this.data = data;
+            this.next = next;
+        }
     }
 
     public static void main(String[] args) {
@@ -42,14 +46,8 @@ public class _35_LL_Insertion {
     }
 
     public static Node insertAtHead(Node head, int num) {
-        Node newNode = new Node(num);
-        if(head == null) {
-            head = newNode;
-            return head;
-        }
-        newNode.next = head;
-        head = newNode;
-        return head;
+        Node newNode = new Node(num, head);
+        return newNode;
     }
 
     public static Node insertAtTail(Node head, int num) {
