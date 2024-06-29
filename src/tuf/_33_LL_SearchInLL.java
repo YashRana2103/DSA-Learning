@@ -1,6 +1,6 @@
 package tuf;
 
-public class _32_LL_LengthOfLL {
+public class _33_LL_SearchInLL {
     static class Node {
         int data;
         Node next;
@@ -17,8 +17,9 @@ public class _32_LL_LengthOfLL {
     public static void main(String[] args) {
         int[] arr = {2, 5, 1, 6, 9, 10, 3, 30};
         Node head = convertArrToLL(arr);
-        System.out.println(lengthOfLL(head));
+        System.out.println(searchInLL(head, 11));
     }
+
     public static Node convertArrToLL(int[] arr) {
         Node head = new Node(arr[0]);
         Node mover = head;
@@ -29,13 +30,13 @@ public class _32_LL_LengthOfLL {
         }
         return head;
     }
-    public static int lengthOfLL(Node head) {
+
+    private static boolean searchInLL(Node head, int value) {
         Node temp = head;
-        int cnt = 0;
         while(temp != null) {
+            if(temp.data == value) return true;
             temp = temp.next;
-            cnt++;
         }
-        return cnt;
+        return false;
     }
 }
