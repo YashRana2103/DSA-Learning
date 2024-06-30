@@ -22,8 +22,8 @@ public class _35_LL_Insertion {
         print(head);
         System.out.println();
 
-//        head = insertAtHead(head, 99);
-//        head = insertAtTail(head, 99);
+        head = insertAtHead(head, 99);
+//        head = insertAtTa il(head, 99);
         print(head);
     }
 
@@ -46,8 +46,7 @@ public class _35_LL_Insertion {
     }
 
     public static Node insertAtHead(Node head, int num) {
-        Node newNode = new Node(num, head);
-        return newNode;
+        return new Node(num, head);
     }
 
     public static Node insertAtTail(Node head, int num) {
