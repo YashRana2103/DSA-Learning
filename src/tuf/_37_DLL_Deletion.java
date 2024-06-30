@@ -30,7 +30,8 @@ public class _37_DLL_Deletion {
             print(head);
             System.out.println();
 
-            head = deletionAtHead(head);
+//            head = deletionAtHead(head);
+            head = deletionAtTail(head);
             print(head);
         }
 
@@ -52,8 +53,17 @@ public class _37_DLL_Deletion {
         }
 
         public static Node deletionAtHead(Node head) {
+            if(head == null) return head;
             head = head.next;
             head.prev = null;
+            return head;
+        }
+
+        public static Node deletionAtTail(Node head) {
+            if(head == null || head.next == null) return null;
+            Node temp = head;
+            while(temp.next.next != null) temp = temp.next;
+            temp.next = null;
             return head;
         }
     }
