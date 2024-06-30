@@ -22,8 +22,9 @@ public class _35_LL_Insertion {
         print(head);
         System.out.println();
 
-        head = insertAtHead(head, 99);
+//        head = insertAtHead(head, 99);
 //        head = insertAtTa il(head, 99);
+        head = insertAtPosition(head, 99, 9);
         print(head);
     }
 
@@ -51,17 +52,31 @@ public class _35_LL_Insertion {
     }
 
     public static Node insertAtTail(Node head, int num) {
-        Node newNode = new Node(num);
         if(head == null) return new Node(num);
         Node temp = head;
         while(temp.next != null) {
             temp = temp.next;
         }
-        temp.next = newNode;
+        temp.next = new Node(num);
         return head;
     }
 
-    public static Node insertAtPosition(Node head, int num, int pos) {
+    public static Node insertAtPosition(Node head, int num, int k) {
+        if(head == null) {
+            if(k == 1) return new Node(num);
+            else return null;
+        }
+        if(k == 1) return new Node(num, head);
+        int cnt = 0;
+        Node temp = head;
+        while(temp != null) {
+            cnt++;
+            if(cnt == k - 1) {
+                temp.next = new Node(num, temp.next);
+                return head;
+            }
+            temp = temp.next;
+        }
         return head;
     }
 }
