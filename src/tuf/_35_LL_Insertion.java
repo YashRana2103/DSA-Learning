@@ -25,7 +25,7 @@ public class _35_LL_Insertion {
 //        head = insertAtHead(head, 99);
 //        head = insertAtTa il(head, 99);
 //        head = insertAtPosition(head, 99, 9);
-        head = insertBeforeValueN(head, 99, 3);
+        head = insertBeforeValueN(head, 99, 33);
         print(head);
     }
 
@@ -84,7 +84,7 @@ public class _35_LL_Insertion {
         if(head == null) return null;
         if(head.data == val) return new Node(num, head);
         Node temp = head;
-        while(temp != null) {
+        while(temp.next != null) {
             if(temp.next.data == val) {
                 temp.next = new Node(num, temp.next);
                 return head;
