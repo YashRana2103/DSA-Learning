@@ -47,7 +47,8 @@ public class _38_DLL_Insertion {
         int[] arr = {3, 1, 4, 8, 9, 2, 10};
         Node head = convertArrToDLL(arr);
 
-        head = insertAtHead(head, 134);
+//        head = insertAtHead(head, 134);
+        head = insertAtTail(head, 134);
         print(head);
     }
 
@@ -56,6 +57,14 @@ public class _38_DLL_Insertion {
         Node newNode = new Node(null, num, head);
         head.prev = newNode;
         head = newNode;
+        return head;
+    }
+
+    public static Node insertAtTail(Node head, int num) {
+        if(head == null) return new Node(num);
+        Node temp = head;
+        while(temp.next != null) temp = temp.next;
+        temp.next = new Node(temp, num, null);
         return head;
     }
 }
