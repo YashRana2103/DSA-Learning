@@ -32,7 +32,7 @@ public class _37_DLL_Deletion {
 
 //            head = deletionAtHead(head);
 //            head = deletionAtTail(head);
-            head = deletionAtPosition(head, 4);
+            head = deletionAtPosition(head, 7);
             print(head);
         }
 
@@ -81,6 +81,11 @@ public class _37_DLL_Deletion {
             while(temp != null) {
                 cnt++;
                 if(cnt == k) {
+                    if(temp.next == null) {
+                        temp.prev.next = null;
+                        temp.prev = null;
+                        break;
+                    }
                     temp.prev.next = temp.next;
                     temp.next.prev = temp.prev;
                     break;
