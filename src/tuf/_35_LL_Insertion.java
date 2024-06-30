@@ -46,15 +46,13 @@ public class _35_LL_Insertion {
     }
 
     public static Node insertAtHead(Node head, int num) {
+        if(head == null) return new Node(num);
         return new Node(num, head);
     }
 
     public static Node insertAtTail(Node head, int num) {
         Node newNode = new Node(num);
-        if(head == null) {
-            head = newNode;
-            return head;
-        }
+        if(head == null) return new Node(num);
         Node temp = head;
         while(temp.next != null) {
             temp = temp.next;
