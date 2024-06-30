@@ -32,6 +32,7 @@ public class _37_DLL_Deletion {
 
 //            head = deletionAtHead(head);
 //            head = deletionAtTail(head);
+            head = deletionAtPosition(head, 4);
             print(head);
         }
 
@@ -53,8 +54,7 @@ public class _37_DLL_Deletion {
         }
 
         public static Node deletionAtHead(Node head) {
-            if(head == null) return head;
-            if(head.prev == null && head.next == null) return null;
+            if(head == null || head.next == null) return head;
             head = head.next;
             head.prev = null;
             return head;
@@ -62,10 +62,31 @@ public class _37_DLL_Deletion {
 
         public static Node deletionAtTail(Node head) {
             if(head == null || head.next == null) return null;
-            if(head.prev == null && head.next == null) return null;
             Node temp = head;
-            while(temp.next.next != null) temp = temp.next;
-            temp.next = null;
+            while(temp.next != null) temp = temp.next;
+            temp.prev.next = null;
+            temp.prev = null;
+            return head;
+        }
+
+        public static Node deletionAtPosition(Node head, int k) {
+            if(head == null || head.next == null) return null;
+            if(k == 1) {
+                head = head.next;
+                head.prev = null;
+                return head;
+            }
+            int cnt = 0;
+            Node temp = head;
+            while(temp != null) {
+                cnt++;
+                if(cnt == k) {
+                    temp.prev.next = temp.next;
+                    temp.next.prev = temp.prev;
+                    break;
+                }
+                temp = temp.next;
+            }
             return head;
         }
     }
