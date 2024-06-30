@@ -25,13 +25,13 @@ public class _37_DLL_Deletion {
         }
 
         public static void main(String[] args) {
-            int[] arr = {3, 1, 4, 6, 2, 9};
+            int[] arr = {3, 1, 4, 8, 9, 2, 10};
             Node head = convertArrToDLL(arr);
-            print(head);
-            System.out.println();
+//            print(head);
+//            System.out.println();
 
 //            head = deletionAtHead(head);
-            head = deletionAtTail(head);
+//            head = deletionAtTail(head);
             print(head);
         }
 
@@ -54,6 +54,7 @@ public class _37_DLL_Deletion {
 
         public static Node deletionAtHead(Node head) {
             if(head == null) return head;
+            if(head.prev == null && head.next == null) return null;
             head = head.next;
             head.prev = null;
             return head;
@@ -61,6 +62,7 @@ public class _37_DLL_Deletion {
 
         public static Node deletionAtTail(Node head) {
             if(head == null || head.next == null) return null;
+            if(head.prev == null && head.next == null) return null;
             Node temp = head;
             while(temp.next.next != null) temp = temp.next;
             temp.next = null;
