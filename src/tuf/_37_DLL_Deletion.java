@@ -28,6 +28,10 @@ public class _37_DLL_Deletion {
             int[] arr = {3, 1, 4, 6, 2, 9};
             Node head = convertArrToDLL(arr);
             print(head);
+            System.out.println();
+
+            head = deletionAtHead(head);
+            print(head);
         }
 
         public static Node convertArrToDLL(int[] arr) {
