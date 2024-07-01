@@ -39,7 +39,8 @@ public class _33_LL_Insertion {
         Node head = convertArrToLL(arr, arr.length);
 //        Node head = null;
 
-        head = insertAtHead(head, 999);
+//        head = insertAtHead(head, 999);
+        head = insertAtTail(head, 999);
         print(head);
     }
 
@@ -48,4 +49,11 @@ public class _33_LL_Insertion {
         return new Node(num, head);
     }
 
+    public static Node insertAtTail(Node head, int num) {
+        if(head == null) return new Node(num);
+        Node temp = head;
+        while(temp.next != null) temp = temp.next;
+        temp.next = new Node(num);
+        return head;
+    }
 }
