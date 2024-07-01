@@ -40,7 +40,9 @@ public class _32_LL_Deletion {
 //        Node head = null;
 
 //        head = deleteHead(head);
-        head = deleteTail(head);
+//        head = deleteTail(head);
+//        head = deletePosition(head, 3);
+//        head = deleteElement(head, 2);
         print(head);
     }
 
@@ -57,6 +59,52 @@ public class _32_LL_Deletion {
         Node temp = head;
         while(temp.next.next != null) temp = temp.next;
         temp.next = null;
+        return head;
+    }
+
+    public static Node deletePosition(Node head, int k) {
+        if(head == null) return null;
+        if(k == 1) {
+            Node temp = head;
+            head = head.next;
+            temp.next = null;
+            return head;
+        }
+        int cnt = 0;
+        Node temp = head;
+        Node prev = null;
+        while(temp != null) {
+            cnt++;
+            if(k == cnt) {
+                prev.next = temp.next;
+                temp.next = null;
+                break;
+            }
+            prev = temp;
+            temp = temp.next;
+        }
+        return head;
+    }
+
+    public static Node deleteElement(Node head, int element) {
+        if(head == null || (head.data == element && head.next == null)) return null;
+        if(head.data == element) {
+            Node temp = head;
+            head = head.next;
+            temp.next = null;
+            return head;
+        }
+        Node temp = head;
+        Node prev = null;
+        while(temp != null) {
+            if(temp.data == element) {
+                prev.next = temp.next;
+                temp.next = null;
+                break;
+            }
+            prev = temp;
+            temp = temp.next;
+        }
         return head;
     }
 }
