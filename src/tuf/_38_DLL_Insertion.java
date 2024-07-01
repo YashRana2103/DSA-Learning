@@ -49,7 +49,9 @@ public class _38_DLL_Insertion {
 
 //        head = insertAtHead(head, 134);
 //        head = insertAtTail(head, 134);
-        head = insertAtPosition(head, 134, 7);
+//        head = insertBeforeTail(head, 134);
+//        head = insertAtPosition(head, 134, 7);
+        head = insertBeforeNode(head, 134, head.next);
         print(head);
     }
 
@@ -66,6 +68,23 @@ public class _38_DLL_Insertion {
         Node temp = head;
         while(temp.next != null) temp = temp.next;
         temp.next = new Node(temp, num, null);
+        return head;
+    }
+
+    public static Node insertBeforeTail(Node head, int num) {
+        if(head == null) return null;
+        if(head.next == null) {
+            head.prev = new Node(null, num, head);
+            head = head.prev;
+            return head;
+        }
+        Node temp = head;
+        while(temp.next != null) {
+            temp = temp.next;
+        }
+        Node newNode = new Node(temp.prev, num, temp);
+        temp.prev.next = newNode;
+        temp.prev = newNode;
         return head;
     }
 
@@ -90,6 +109,25 @@ public class _38_DLL_Insertion {
                 temp.prev.next = newNode;
                 temp.prev = newNode;
                 break;
+            }
+            temp = temp.next;
+        }
+        return head;
+    }
+
+    public static Node insertBeforeNode(Node head, int num, Node node) {
+        if(head == null) return head;
+        if(head.data == node.data) {
+            head.prev = new Node(null, num, head);
+            head = head.prev;
+            return head;
+        }
+        Node temp = head;
+        while(temp != null) {
+            if(temp.data == node.data) {
+                temp.prev = new Node(temp.prev, num, temp);
+                temp.prev.prev.next = temp.prev;
+                return head;
             }
             temp = temp.next;
         }
