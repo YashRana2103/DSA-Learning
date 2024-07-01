@@ -64,7 +64,9 @@ public class _34_LL_Deletion {
     public static Node deleteAtPosition(Node head, int position) {
         if(head == null) return head;
         if(position == 1) {
+            Node temp = head;
             head = head.next;
+            temp.next = null;
             return head;
         }
         int cnt = 0;
@@ -88,6 +90,7 @@ public class _34_LL_Deletion {
         if(head.data == element) {
             Node temp = head;
             head = head.next;
+            temp.next = null;
             return head;
         }
         Node temp = head;
@@ -95,6 +98,7 @@ public class _34_LL_Deletion {
         while(temp != null) {
             if(temp.data == element) {
                 prev.next = prev.next.next;
+                temp.next = null;
                 break;
             }
             prev = temp;
