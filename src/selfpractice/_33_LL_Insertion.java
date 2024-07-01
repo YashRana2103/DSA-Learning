@@ -41,7 +41,8 @@ public class _33_LL_Insertion {
 
 //        head = insertAtHead(head, 999);
 //        head = insertAtTail(head, 999);
-        head = insertAtPosition(head, 999, 5);
+//        head = insertAtPosition(head, 999, 5);
+//        head = insertBeforeElement(head, 999, 2);
         print(head);
     }
 
@@ -69,6 +70,20 @@ public class _33_LL_Insertion {
         while(temp != null) {
             cnt++;
             if(cnt == k - 1) {
+                temp.next = new Node(num, temp.next);
+                return head;
+            }
+            temp = temp.next;
+        }
+        return head;
+    }
+
+    public static Node insertBeforeElement(Node head, int num, int element) {
+        if(head == null) return null;
+        if(head.data == element) return new Node(num, head);
+        Node temp = head;
+        while(temp.next != null) {
+            if(temp.next.data == element) {
                 temp.next = new Node(num, temp.next);
                 return head;
             }
