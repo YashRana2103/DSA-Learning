@@ -31,7 +31,7 @@ public class _37_DLL_Deletion {
 //            print(head);
 //            System.out.println();
 
-            head = deletionAtHead(head);
+//            head = deletionAtHead(head);
 //            head = deletionAtTail(head);
 //        head = deletionAtPosition(head, 7);
 //        head = deleteANode(head, head.next.next.next.next.next.next);
