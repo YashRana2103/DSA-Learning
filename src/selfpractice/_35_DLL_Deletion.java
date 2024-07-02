@@ -43,6 +43,17 @@ public class _35_DLL_Deletion {
     public static void main(String[] args) {
         int[] arr = {3, 5, 6, 9, 10, 14, 20};
         Node head = convertArrToDLL(arr, arr.length);
+
+        head = deleteHead(head);
         print(head);
+    }
+
+    public static Node deleteHead(Node head) {
+        if(head == null || head.next == null) return null;
+        Node temp = head;
+        head = head.next;
+        head.prev = null;
+        temp.next = null;
+        return head;
     }
 }
