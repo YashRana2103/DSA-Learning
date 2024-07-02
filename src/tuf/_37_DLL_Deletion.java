@@ -56,10 +56,11 @@ public class _37_DLL_Deletion {
     }
 
     public static Node deletionAtHead(Node head) {
-        if(head == null) return null;
-        if(head.next == null) return null;
+        if(head == null || head.next == null) return null;
+        Node temp = head;
         head = head.next;
         head.prev = null;
+        temp.next = null;
         return head;
     }
 
