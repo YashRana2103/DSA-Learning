@@ -57,9 +57,8 @@ public class _38_DLL_Insertion {
 
     public static Node insertAtHead(Node head, int num) {
         if(head == null) return new Node(num);
-        Node newNode = new Node(null, num, head);
-        head.prev = newNode;
-        head = newNode;
+        head.prev = new Node(null, num, head);
+        head = head.prev;
         return head;
     }
 
