@@ -1,5 +1,7 @@
 package tuf;
 
+import selfpractice._36_DLL_Insertion;
+
 public class _38_DLL_Insertion {
 
     static class Node {
@@ -115,21 +117,23 @@ public class _38_DLL_Insertion {
     }
 
     public static Node insertBeforeNode(Node head, int num, Node node) {
-        if(head == null) return head;
-        if(head.data == node.data) {
+        if(node.next == null && node.prev == null) {
             head.prev = new Node(null, num, head);
             head = head.prev;
             return head;
         }
-        Node temp = head;
-        while(temp != null) {
-            if(temp.data == node.data) {
-                temp.prev = new Node(temp.prev, num, temp);
-                temp.prev.prev.next = temp.prev;
-                return head;
-            }
-            temp = temp.next;
+        if(node.prev == null) {
+            head.prev = new Node(null, num, head);
+            head = head.prev;
+            return head;
         }
+        if(node.next == null) {
+            node.prev.next = new Node(node.prev, num, node);
+            node.prev = node.prev.next;
+            return head;
+        }
+        node.prev = new Node(node.prev, num, node);
+        node.prev.prev.next = node.prev;
         return head;
     }
 }
