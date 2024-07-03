@@ -48,6 +48,7 @@ public class _35_DLL_Deletion {
 //        head = deleteHead(head);
 //        head = deleteTail(head);
 //        head = deletePosition(head, 7);
+        head = deleteByElement(head, 3);
 //        head = deleteNode(head, head.next.next.next.next.next.next);
         print(head);
     }
@@ -85,6 +86,34 @@ public class _35_DLL_Deletion {
         while(temp != null) {
             cnt++;
             if(cnt == k) {
+                if(temp.next == null) {
+                    temp.prev.next = null;
+                    temp.prev = null;
+                    return head;
+                }
+                temp.prev.next = temp.next;
+                temp.next.prev = temp.prev;
+                temp.prev = temp.next = null;
+                return head;
+            }
+            temp = temp.next;
+        }
+        return head;
+    }
+
+    public static Node deleteByElement(Node head, int element) {
+        if(head == null) return null;
+        if(head.data == element) {
+            if(head.next == null) return null;
+            Node temp = head;
+            head = head.next;
+            head.prev = null;
+            temp.next = null;
+            return head;
+        }
+        Node temp = head;
+        while(temp != null) {
+            if(temp.data == element) {
                 if(temp.next == null) {
                     temp.prev.next = null;
                     temp.prev = null;
