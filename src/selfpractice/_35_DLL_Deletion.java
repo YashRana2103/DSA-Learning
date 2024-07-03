@@ -48,7 +48,7 @@ public class _35_DLL_Deletion {
 //        head = deleteHead(head);
 //        head = deleteTail(head);
 //        head = deletePosition(head, 7);
-        head = deleteByElement(head, 3);
+//        head = deleteByElement(head, 3);
 //        head = deleteNode(head, head.next.next.next.next.next.next);
         print(head);
     }
