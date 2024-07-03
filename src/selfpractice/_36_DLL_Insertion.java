@@ -13,12 +13,6 @@ public class _36_DLL_Insertion {
             this.next = null;
         }
 
-        Node(Node prev, int data) {
-            this.prev = prev;
-            this.data = data;
-            this.next = null;
-        }
-
         Node(Node prev, int data, Node next) {
             this.prev = prev;
             this.data = data;
@@ -30,7 +24,7 @@ public class _36_DLL_Insertion {
         Node head = new Node(arr[0]);
         Node mover = head;
         for (int i = 1; i < arr.length; i++) {
-            mover.next = new Node(mover, arr[i]);
+            mover.next = new Node(mover, arr[i], null);
             mover = mover.next;
         }
         return head;
@@ -49,11 +43,11 @@ public class _36_DLL_Insertion {
         Node head = convertArrToDLL(arr);
 //        Node head = null;
 
-        head = insertAtHead(head, 69);
-//        head = insertAtTail(head, 134);
-//        head = insertBeforeTail(head, 134);
-//        head = insertAtPosition(head, 134, 7);
-//        head = insertBeforeNode(head, 134, head.next);
+//        head = insertAtHead(head, 69);
+        head = insertAtTail(head, 69);
+//        head = insertBeforeTail(head, 69);
+//        head = insertAtPosition(head, 69, 7);
+//        head = insertBeforeNode(head, 69, head.next);
         print(head);
     }
 
@@ -61,6 +55,14 @@ public class _36_DLL_Insertion {
         if(head == null) return new Node(num);
         head.prev = new Node(null, num, head);
         head = head.prev;
+        return head;
+    }
+
+    public static Node insertAtTail(Node head, int num) {
+        if(head == null) return new Node(num);
+        Node temp = head;
+        while(temp.next != null) temp = temp.next;
+        temp.next = new Node(temp, num, null);
         return head;
     }
 }
