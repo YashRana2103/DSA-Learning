@@ -46,7 +46,8 @@ public class _35_DLL_Deletion {
         Node head = convertArrToDLL(arr, arr.length);
 
 //        head = deleteHead(head);
-        head = deleteTail(head);
+//        head = deleteTail(head);
+        head = deletePosition(head, 7);
         print(head);
     }
 
@@ -65,6 +66,36 @@ public class _35_DLL_Deletion {
         while(temp.next != null) temp = temp.next;
         temp.prev.next = null;
         temp.prev = null;
+        return head;
+    }
+
+    public static Node deletePosition(Node head, int k) {
+        if(head == null) return null;
+        if(head.next == null && k == 1) return null;
+        if(k == 1) {
+            Node temp = head;
+            head = head.next;
+            head.prev = null;
+            temp.prev = null;
+            return head;
+        }
+        int cnt = 0;
+        Node temp = head;
+        while(temp != null) {
+            cnt++;
+            if(cnt == k) {
+                if(temp.next == null) {
+                    temp.prev.next = null;
+                    temp.prev = null;
+                    return head;
+                }
+                temp.prev.next = temp.next;
+                temp.next.prev = temp.prev;
+                temp.prev = temp.next = null;
+                return head;
+            }
+            temp = temp.next;
+        }
         return head;
     }
 }
