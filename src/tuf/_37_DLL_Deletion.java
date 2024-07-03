@@ -74,10 +74,13 @@ public class _37_DLL_Deletion {
     }
 
     public static Node deletionAtPosition(Node head, int k) {
-        if(head == null || head.next == null) return null;
+        if(head == null) return null;
+        if(head.next == null && k == 1) return null;
         if(k == 1) {
+            Node temp = head;
             head = head.next;
             head.prev = null;
+            temp.next = null;
             return head;
         }
         int cnt = 0;
