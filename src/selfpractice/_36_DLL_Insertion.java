@@ -47,7 +47,7 @@ public class _36_DLL_Insertion {
 //        head = insertAtTail(head, 69);
 //        head = insertBeforeTail(head, 69);
 //        head = insertAtPosition(head, 69, 8);
-//        head = insertBeforeNode(head, 69, head.next);
+//        head = insertBeforeNode(head, 69, head.next.next.next.next.next.next);
         print(head);
     }
 
@@ -97,6 +97,27 @@ public class _36_DLL_Insertion {
             }
             temp = temp.next;
         }
+        return head;
+    }
+
+    public static Node insertBeforeNode(Node head, int num, Node node) {
+        if(node.next == null && node.prev == null) {
+            head.prev = new Node(null, num, head);
+            head = head.prev;
+            return head;
+        }
+        if(node.prev == null) {
+            head.prev = new Node(null, num, head);
+            head = head.prev;
+            return head;
+        }
+        if(node.next == null) {
+            node.prev.next = new Node(node.prev, num, node);
+            node.prev = node.prev.next;
+            return head;
+        }
+        node.prev = new Node(node.prev, num, node);
+        node.prev.prev.next = node.prev;
         return head;
     }
 }
