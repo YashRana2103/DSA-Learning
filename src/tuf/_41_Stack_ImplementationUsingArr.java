@@ -1,6 +1,6 @@
 package tuf;
 
-public class _41_StackUsingArr {
+public class _41_Stack_ImplementationUsingArr {
     static int[] arr = new int[5];
     static int top = -1;
 
